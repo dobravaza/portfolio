@@ -235,3 +235,14 @@ document.addEventListener('click', function(event) {
       document.body.classList.add('modal-open');
   }
 });
+
+
+
+
+document.querySelector('.fixed-icon').addEventListener('click', function() {
+  document.getElementById('chatbotWindow').style.display = 'block';
+});
+
+document.getElementById('closeChatbot').addEventListener('click', function() {
+  document.getElementById('chatbotWindow').style.display = 'none';
+});

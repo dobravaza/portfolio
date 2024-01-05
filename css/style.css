@@ -1183,3 +1183,58 @@ a {
   text-decoration: none;
   cursor: pointer;
 }
+
+.fixed-icon {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  width: 70px; /* Możesz dostosować rozmiar */
+  height: 70px; /* Możesz dostosować rozmiar */
+  border-radius: 50%; /* Okrągły kształt */
+  background-image: url('/img/intro-carousel/247.png'); /* Link do obrazka */
+  background-size: cover;
+  z-index: 1000;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Efekt przy przewijaniu */
+@media screen and (max-width: 768px) {
+  .fixed-icon {
+    transform: scale(1.2);
+  }
+}
+
+
+
+
+
+
+.chatbot-window {
+  position: fixed;
+  bottom: 90px; /* Zmieniono, aby nie kolidowało z ikoną */
+  left: 20px;
+  width: 300px;
+  height: 400px;
+  border: 1px solid #ddd;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  display: none; /* Początkowo ukryte */
+  z-index: 999; /* Mniejsze niż ikona, aby ikona była na wierzchu */
+}
+
+.chatbot-header {
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: right;
+}
+
+.chatbot-header span {
+  float: left;
+  font-weight: bold;
+}
+
+.chatbot-content {
+  padding: 10px;
+  height: 350px; /* Wysokość pomniejszona o nagłówek */
+  overflow-y: auto; /* Scroll dla zawartości jeśli jest za dużo tekstu */
+}
