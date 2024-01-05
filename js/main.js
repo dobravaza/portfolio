@@ -179,3 +179,59 @@ jQuery(document).ready(function( $ ) {
 //       document.getElementById("popup").style.display = "none";
 //   }
 // }
+
+
+// Otwieranie popupa
+var contactPopup = document.getElementById('contactPopup');
+// Otwieranie popupa
+var contactLink = document.getElementById('contactLink');
+contactLink.onclick = function(event) {
+    event.preventDefault(); // Zapobiega przewijaniu strony
+    contactPopup.style.display = "block";
+    initMap(); // Inicjalizuj mapę podczas otwierania popupa
+    document.body.style.overflow = 'hidden'; // Wyłącz scrollowanie
+    document.body.classList.add('modal-open'); // Dodaj klasę do body
+}
+
+// Reszta kodu pozostaje bez zmian...
+
+
+// Zamykanie popupa
+var closeButton = document.getElementsByClassName("close")[0];
+closeButton.onclick = function() {
+    contactPopup.style.display = "none";
+    document.body.style.overflow = 'auto'; // Włącz scrollowanie
+    document.body.classList.remove('modal-open'); // Usuń klasę z body
+}
+
+
+// Obsługa klawisza Escape
+window.onkeydown = function(event) {
+  if (event.key === 'Escape' && contactPopup.style.display === "block") {
+      contactPopup.style.display = "none";
+      document.body.style.overflow = 'auto'; // Włącz scrollowanie
+      document.body.classList.remove('modal-open'); // Usuń klasę z body
+  }
+};
+
+
+// Inicjalizacja Google Maps
+function initMap() {
+    var location = {lat: -34.397, lng: 150.644}; // Zmień na swoją lokalizację
+    var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 8,
+        center: location
+    });
+    var marker = new google.maps.Marker({
+        position: location,
+        map: map
+    });
+}
+document.addEventListener('click', function(event) {
+  if (event.target.classList.contains('contactLink')) {
+      contactPopup.style.display = "block";
+      initMap();
+      document.body.style.overflow = 'hidden';
+      document.body.classList.add('modal-open');
+  }
+});

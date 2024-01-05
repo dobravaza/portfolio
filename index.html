@@ -47,6 +47,17 @@
 
 <body id="body">
 
+  <div id="contactPopup" class="popup">
+    <div class="popup-content">
+        <span class="close">&times;</span>
+        <h2>Kontakt do nas.</h2>
+        <p>Email: dziuba00.grzegorz@gmail.com</p>
+        <p>Telefon:724 419 285</p>
+        <p>Dostępni 24/7</p>
+        <a href="mailto:dziuba00.grzegorz@gmail.com" class="email-button">Napisz do nas</a>
+        <div id="map"></div> <!-- Tu będzie mapka -->
+    </div>
+  </div>
   <!--==========================
     Top Bar
   ============================-->
@@ -90,11 +101,23 @@
 
             </ul>
           </li>
-          <li><a href="#contact">Kontakt</a></li>
+          <li><a href="javascript:void(0)" id="contactLink">Kontakt</a></li>
         </ul>
       </nav><!-- #nav-menu-container -->
     </div>
   </header><!-- #header -->
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=TWOJKLUCZAPI&callback=initMap" async defer></script>
+
+<!--popup  -->
+
+
+
+<!-- Link do Google Maps API -->
+
+
+
+<!-- popup -->
 
   <!--==========================
     Intro Section
@@ -107,7 +130,7 @@
         dopasowana do potrzeb Twojej <span>firmy.</span></h2>
       <div>
         
-        <a href="#about" class="btn-get-started scrollto">Kontakt</a>
+        <a href="#about" class="btn-get-started scrollto fadeInUpBig bounceIn bounce">24/7</a>
         <a href="#demo" class="btn-projects scrollto">Cennik</a>
       </div>
     </div>
@@ -210,7 +233,7 @@
               <div class="pricingTable kartka2">
                       <div class="pricingTable-header ">
                         <i class="fa fa-briefcase"></i>
-                        <div class="price-value"> 60 zł<span class="month">godzina</span> </div>
+                        <div class="price-value"><span class="hehe">od</span> 60 zł<span class="month">godzina</span> </div>
                       </div>
                       <h3 class="heading">Bez zobowiązań</h3>
                       <div class="pricing-content">
@@ -225,7 +248,7 @@
                           <p></p>
                       </div>
                       <div class="pricingTable-signup">
-                          <a href="#">Kontakt z nami</a>
+                        <li><a href="javascript:void(0);" class="contactLink">Kontakt</a></li>
                       </div>
                   </div>
               </div>
@@ -234,23 +257,22 @@
                 <div class="pricingTable blue kartka1">
                       <div class="pricingTable-header">
                           <i class="fa fa-diamond"></i>
-                          <div class="price-value"> 500 zł<span class="month">miesięcznie</span> </div>
-                      </div>
+                          <div class="price-value"><span class="hehe">od</span> 500 zł<span class="month">miesiecznie</span> </div>
+                        </div>
                       <h3 class="heading">Premium</h3>
                       <div class="pricing-content">
                         <ul>
                           <ul>
-                            <li><b>Helpdesk </li>
-                            <li><b>Umowa serwisowa</li>
+                            <li><b>Helpdesk. </li>
+                              <li><b>Technik na miejscu.</li>
+                            <li><b>Umowa serwisowa.</li>
                             <li><b>Pomoc zdalna.</li>
-                            <li><b>Czas reakcji do 30 minut</li>
-                            <li><b>Czas reakcji do 30 minut</li>
-
+                            <li><b>Czas reakcji do 30 minut.</li>
 
                         </ul>
                       </div>
                       <div class="pricingTable-signup">
-                          <a href="#">Kontakt z nami.</a>
+                        <li><a href="javascript:void(0);" class="contactLink">Kontakt</a></li>
                       </div>
                   </div>
               </div>
@@ -294,8 +316,10 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-9 text-center text-lg-left">
-            <h3 class="cta-title">Kontakt z nami.</h3>
-            <p class="cta-text"> Skontaktuj się z nami by dsotać indywidaulną wycenę wraz z ofertą.</p>
+
+              .</h3>
+            <p class="cta-text"> <li><a href="javascript:void(0);" class="contactLink">Skontaktuj się z nami by dostać indywidaulną wycenę wraz z ofertą.</a></li>
+              </p>
           </div>
           <div class="col-lg-3 cta-btn-container text-center">
             <a class="cta-btn align-middle" href="#">Wezwij mnie do akcji.</a>
